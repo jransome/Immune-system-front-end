@@ -5,13 +5,24 @@ body {
 }
 
 .criteria {
+  background-color: rgb(32, 29, 43);
   border-color: green;
   border-style: solid;
-  color: rgb(34, 36, 35);
+  color: rgb(255, 255, 255);
   font-size: 14pt;
   margin: 10px;
   padding: 25px;
   height: 100%;
   width: 200px;
   text-align: center;
+}
+
+.sub-category {
+  color: white;
+  border-color: green;
+  background-color:rgb(0, 0, 0);
+  border-style: solid;
+  text-align: center;
+  height: 100%;
+  width: 275px;
 }

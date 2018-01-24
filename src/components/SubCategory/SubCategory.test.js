@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import CategoryArea from './CategoryArea';
+import SubCategory from './SubCategory';
 import Criteria from '../Criteria/Criteria';
 
 
-describe('CategoryArea component', () => {
+describe('SubCategory component', () => {
     let component;
     const criteriaDescriptions = ["hello", 'hi', 'blah'];
 
     beforeEach(() => {
-        component = shallow(<CategoryArea criteriaDescriptions={criteriaDescriptions} />);
+        component = shallow(<SubCategory criteriaDescriptions={criteriaDescriptions} />);
     })
 
     it('renders without crashing', () => {
