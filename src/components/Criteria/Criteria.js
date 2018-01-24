@@ -4,7 +4,7 @@ class Criteria extends Component {
     render(){
         // console.log(this.props) // { description: 'This is a criteria.' }
         return(
-            <div>
+            <div className="criteria">
                 { this.props.description }
             </div>
         )
