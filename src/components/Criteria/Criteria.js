@@ -8,6 +8,7 @@ class Criteria extends Component {
         }
         // this.handleChange = this.handleChange.bind(this); // needed if you don't use an arrow function to create handleChange
     }
+
     // function that gets called when the selection in the dropdown changes
     // changes the state to the new selection
     handleChange = (event)=>{
