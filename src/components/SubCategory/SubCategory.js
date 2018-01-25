@@ -11,7 +11,8 @@ class SubCategory extends Component {
                 <Criteria 
                     key={'crit-' + i} 
                     description={criteria.description} 
-                    status={criteria.status} 
+                    status={criteria.status}
+                    criteriaStatusChangeHandler={this.props.criteriaStatusChangeHandler} 
                 />
             )
         }

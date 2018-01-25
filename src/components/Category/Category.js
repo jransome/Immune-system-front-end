@@ -3,7 +3,6 @@ import SubCategory from '../SubCategory/SubCategory';
 
 class Category extends Component {
     render(){
-        // console.log(this.props.subCategoriesData[0])
         const subCategoriesAry = [];
         for (let i = 0; i < this.props.subCategoriesData.length; i++) {
             let subCat = this.props.subCategoriesData[i];
@@ -11,7 +10,8 @@ class Category extends Component {
                 <SubCategory 
                     key={'sub-' + i} 
                     subName={subCat.SubName} 
-                    criteriaData={subCat.Criteria} 
+                    criteriaData={subCat.Criteria}
+                    criteriaStatusChangeHandler={this.props.criteriaStatusChangeHandler} 
                 />
             )
         }
