@@ -11,7 +11,7 @@ class App extends Component {
     }
 
     criteriaStatusChangeHandler = (criteriaId, newStatus) => {
-        console.log(criteriaId + "'s status has changed to: " + newStatus);
+        // console.log(criteriaId + "'s status has changed to: " + newStatus);
         let newData = this.state.data;
 
         newData.forEach(category => {

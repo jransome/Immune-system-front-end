@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 
 class Criteria extends Component {
-
+    
     eventHandler = (event) => {
         this.props.criteriaStatusChangeHandler(this.props.id, event.target.value);
     }
-
+    
     getStatusStyle = (status) => {
-        switch (status) {
-            case 2:
-                return 'done';
-            case 1:
-                return 'in-progress';
-            case -1:
-                return 'not-applicable';
-            default:
-                return 'not-done';
+        const statusToClass = {
+            '2': 'done',
+            '1': 'in-progress',
+            '0': 'not-done',
+            '-1': 'not-applicable',
         }
+        return statusToClass[status];
     }
 
     render(){
