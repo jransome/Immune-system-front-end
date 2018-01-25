@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
+import Constants, { STATUS_TO_CLASS } from '../../Constants'
 
 class Criteria extends Component {
-    
-    eventHandler = (event) => {
+    onChange = (event) => {
         this.props.criteriaStatusChangeHandler(this.props.id, event.target.value);
     }
     
     getStatusStyle = (status) => {
-        const statusToClass = {
-            '2': 'done',
-            '1': 'in-progress',
-            '0': 'not-done',
-            '-1': 'not-applicable',
-        }
-        return statusToClass[status];
+        return STATUS_TO_CLASS[status];
     }
 
     render(){
@@ -21,7 +15,7 @@ class Criteria extends Component {
             <div className={`criteria ${this.getStatusStyle(this.props.status)}`}>
                 { this.props.description }
                 <div className="criteria-input">
-                    <select defaultValue={this.props.status} onChange={this.eventHandler}>
+                    <select defaultValue={this.props.status} onChange={this.onChange}>
                         <option value="2" >Done</option> 
                         <option value="1" >In Progress</option>
                         <option value="0" >Not Done</option>

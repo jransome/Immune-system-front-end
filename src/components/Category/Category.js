@@ -17,8 +17,8 @@ class Category extends Component {
         }
 
         return(
-            <div>
-                {this.props.categoryName}
+            <div className="category">
+                <h1>{this.props.categoryName}</h1>
                 {subCategoriesAry}
             </div>
         )
