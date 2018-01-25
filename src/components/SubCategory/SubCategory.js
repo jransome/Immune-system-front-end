@@ -2,25 +2,24 @@ import React, { Component } from 'react';
 import Criteria from '../Criteria/Criteria';
 
 class SubCategory extends Component {
-    // renderCriteria(i, desc) {
-    //     return (
-    //         <div key={"sub-" + i}>
-    //             <Criteria description={desc} />
-    //         </div>
-    //     );
-    // }
-
     render() {
-        // const criterias = [];
-        // for (let i = 0; i < this.props.criteriaDescriptions.length; i++) {
-        //     let desc = this.props.criteriaDescriptions[i];
-        //     criterias.push(this.renderCriteria(i, desc));
-        // }
+
+        const criteriaAry = [];
+        for (let i = 0; i < this.props.criteriaData.length; i++) {
+            let criteria = this.props.criteriaData[i];
+            criteriaAry.push(
+                <Criteria 
+                    key={'crit-' + i} 
+                    description={criteria.description} 
+                    status={criteria.status} 
+                />
+            )
+        }
 
         return(
             <div className="sub-category">
-                {/* <h2>{this.props.subName}</h2>
-                { criterias } */}
+                <h2>{this.props.subName}</h2>
+                { criteriaAry }
             </div>
         )
     }

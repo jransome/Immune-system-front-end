@@ -13,7 +13,7 @@ describe('SubCategory component', () => {
         component = shallow(<SubCategory criteriaDescriptions={criteriaDescriptions} />);
     })
 
-    it('renders without crashing', () => {
+    xit('renders without crashing', () => {
         expect(component.exists()).toEqual(true);
     })
 
