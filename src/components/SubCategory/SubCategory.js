@@ -3,13 +3,13 @@ import Criteria from '../Criteria/Criteria';
 
 class SubCategory extends Component {
     render() {
-
         const criteriaAry = [];
         for (let i = 0; i < this.props.criteriaData.length; i++) {
             let criteria = this.props.criteriaData[i];
             criteriaAry.push(
                 <Criteria 
-                    key={'crit-' + i} 
+                    key={i} 
+                    id={criteria.id}
                     description={criteria.description} 
                     status={criteria.status}
                     criteriaStatusChangeHandler={this.props.criteriaStatusChangeHandler} 

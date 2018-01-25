@@ -8,7 +8,7 @@ class Category extends Component {
             let subCat = this.props.subCategoriesData[i];
             subCategoriesAry.push(
                 <SubCategory 
-                    key={'sub-' + i} 
+                    key={i} 
                     subName={subCat.SubName} 
                     criteriaData={subCat.Criteria}
                     criteriaStatusChangeHandler={this.props.criteriaStatusChangeHandler} 
