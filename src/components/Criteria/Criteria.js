@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Criteria extends Component {
 
-    criteriaStatusChangeHandler = (event) => {
+    eventHandler = (event) => {
         this.props.criteriaStatusChangeHandler(this.props.id, event.target.value);
     }
 
@@ -24,7 +24,7 @@ class Criteria extends Component {
             <div className={`criteria ${this.getStatusStyle(this.props.status)}`}>
                 { this.props.description }
                 <div className="criteria-input">
-                    <select defaultValue={this.props.status} onChange={this.criteriaStatusChangeHandler}>
+                    <select defaultValue={this.props.status} onChange={this.eventHandler}>
                         <option value="2" >Done</option> 
                         <option value="1" >In Progress</option>
                         <option value="0" >Not Done</option>

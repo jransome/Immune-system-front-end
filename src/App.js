@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Category from './components/Category/Category';
+import SubCategory from './components/SubCategory/SubCategory';
 
 class App extends Component {
     constructor(props){
@@ -10,12 +11,23 @@ class App extends Component {
     }
 
     criteriaStatusChangeHandler = (criteriaId, newStatus) => {
+        console.log(criteriaId + "'s status has changed to: " + newStatus);
         let newData = this.state.data;
 
+        newData.forEach(category => {
+            category.SubCategories.forEach(subCategory => {
+                subCategory.Criteria.forEach(criteria => {
+                    if(criteria.id === criteriaId){
+                        criteria.status = newStatus;
+                        console.log(criteria)
+                    }
+                })
+            });
+        });
+
         this.setState(
-            { id: criteriaId }
+            { data: newData }
         )
-        console.log(criteriaId + "'s status has changed to: " + newStatus);
     }
 
     render() {
