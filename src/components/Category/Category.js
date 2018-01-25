@@ -2,26 +2,33 @@ import React, { Component } from 'react';
 import SubCategory from '../SubCategory/SubCategory';
 
 class Category extends Component {
-
-    renderSubCat(i, name) {
-        return (
-            <div key={"cat-" + i}>
-                <SubCategory subName={name} criteriaDescriptions={this.props.criteriaDescriptions} />
-            </div>
-        );
-    }
+    // renderSubCat(i, name) {
+    //     return (
+    //         <div key={"cat-" + i}>
+    //             <SubCategory subName={name} criteriaDescriptions={this.props.criteriaDescriptions} />
+    //         </div>
+    //     );
+    // }
 
     render(){
-        const subCategories = [];
-        for (let i = 0; i < this.props.subNames.length; i++) {
-            let subName = this.props.subNames[i];
-            subCategories.push(this.renderSubCat(i, subName));
+        // console.log(this.props)
+        const subCategoriesAry = [];
+        for (let i = 0; i < this.props.subCategoriesData.length; i++) {
+            let subCat = this.props.subCategoriesData[i];
+            // subCategories.push(this.renderSubCat(i, subName));
+            subCategoriesAry.push(
+                <SubCategory 
+                    key={'sub-' + i} 
+                    subName={subCat.SubName} 
+                    criteriaData={subCat.Criteria} 
+                />
+            )
         }
 
         return(
             <div>
                 {this.props.categoryName}
-                {subCategories}
+                {subCategoriesAry}
             </div>
         )
     }
