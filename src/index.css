@@ -6,7 +6,7 @@ body {
 
 .criteria {
   background-color: rgb(32, 29, 43);
-  border-color: green;
+  /* border-color: white; */
   border-style: solid;
   color: rgb(255, 255, 255);
   font-size: 14pt;
@@ -16,10 +16,25 @@ body {
   width: 200px;
   text-align: center;
 }
+.done {
+  border-color: green;
+}
+
+.in-progress {
+  border-color: yellow;
+}
+
+.not-done {
+  border-color: red;
+}
+
+.not-applicable {
+  border-color: gray;
+}
 
 .sub-category {
   color: white;
-  border-color: green;
+  border-color: rgb(255, 255, 255);
   background-color:rgb(0, 0, 0);
   border-style: solid;
   text-align: center;

@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 
 class Criteria extends Component {
+    getStatusStyle(status){
+        switch (status) {
+            case 2:
+                return 'done';
+            case 1:
+                return 'in-progress';
+            case -1:
+                return 'not-applicable';
+            default:
+                return 'not-done';
+        }
+    }
+
     render(){
+
         return(
-            <div className="criteria">
+            <div className={`criteria ${this.getStatusStyle(this.props.status)}`}>
                 { this.props.description }
                 <div className="criteria-input">
                     <select defaultValue={this.props.status} onChange={this.props.criteriaStatusChangeHandler}>

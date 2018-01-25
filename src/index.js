@@ -39,7 +39,7 @@ const BACKEND_DATA = [
                 Criteria: [
                     { 
                         description: 'Cat 1, subcat 2, criteria 1',
-                        status: 0,
+                        status: 1,
                     },
                     { 
                         description: 'Cat 1, subcat 2, criteria 2',
@@ -61,7 +61,7 @@ const BACKEND_DATA = [
                     },
                     { 
                         description: 'Cat 2, subcat 1, criteria 2',
-                        status: 0,
+                        status: -1,
                     },
                 ] 
             },
