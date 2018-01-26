@@ -18,12 +18,36 @@ class Category extends Component {
 
         return(
             <div className="category">
-                <h1>{this.props.categoryName}</h1>
-                {subCategoriesAry}
+            <table>
+                <tr>
+                    <th colspan="4"><h1>{this.props.categoryName}</h1></th>
+                </tr>
+                <tr>
+                    <td> {subCategoriesAry}</td>
+                </tr>
+            </table>
             </div>
         )
     }
 }
 
 export default Category;
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
 
