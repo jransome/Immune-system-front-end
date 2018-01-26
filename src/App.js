@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Category from './components/Category/Category';
-import SubCategory from './components/SubCategory/SubCategory';
 
 class App extends Component {
     constructor(props){
@@ -19,7 +18,7 @@ class App extends Component {
                 subCategory.Criteria.forEach(criteria => {
                     if(criteria.id === criteriaId){
                         criteria.status = newStatus;
-                        console.log(criteria)
+                        // console.log(criteria)
                     }
                 })
             });

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Constants, { STATUS_TO_CLASS } from '../../Constants'
+import { STATUS_TO_CLASS } from '../../Constants'
 
 class Criteria extends Component {
     onChange = (event) => {
-        this.props.criteriaStatusChangeHandler(this.props.id, event.target.value);
+        this.props.criteriaStatusChangeHandler(this.props.id, parseInt(event.target.value));
     }
     
     getStatusStyle = (status) => {
