@@ -35,15 +35,14 @@ class App extends Component {
         )
     }
 
-
     render() {
-        const links = [];
+        const catLinks = [];
         const routes = [];
 
         for (let i = 0; i < this.state.data.length; i++) {
             let cat = this.state.data[i];
 
-            links.push(<li  key={i}><Link to={`/cat${i + 1}`}>{cat.CategoryName}</Link></li>);
+            catLinks.push(<li  key={i}><Link to={`/cat${i + 1}`}>{cat.CategoryName}</Link></li>);
             let catProps = {
                 key: i,
                 categoryName: cat.CategoryName,
@@ -53,7 +52,7 @@ class App extends Component {
             // routes.push(<Route exact path='/' key={0} component={Category}/>)
             routes.push(
                 <Route key={i+1} path={`/cat${i + 1}`} render={(routeProps) => (
-                    <Category {...routeProps} {...catProps} />                    
+                    <Category {...routeProps} {...catProps} />       
                 )} />
             )
         }
@@ -62,16 +61,11 @@ class App extends Component {
             <div>
                 <Router>
                     <div className="container" >
-                        <div className="category-tabs"><ul> {links} </ul></div>
+                        <div className="category-tabs"><ul> {catLinks} </ul></div>
                         <Switch>
                             {routes}
-                            {/* <Route exact path='/' component={Category}/> */}
-                            {/* <Route path='/'>
-                                <DefaultRoute handler={routes[0]} />
-                            </Route> */}
                         </Switch>
                     </div>
-                    
                 </Router>
             </div>
         )
