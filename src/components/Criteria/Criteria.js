@@ -6,13 +6,13 @@ class Criteria extends Component {
         this.props.criteriaStatusChangeHandler(this.props.id, parseInt(event.target.value));
     }
     
-    getStatusStyle = (status) => {
+    getCritStatusStyle = (status) => {
         return STATUS_TO_CLASS[status];
     }
 
     render(){
         return(
-            <div className={`criteria ${this.getStatusStyle(this.props.status)}`}>
+            <div className={`criteria ${this.getCritStatusStyle(this.props.status)}`}>
                 { this.props.description }
                 <div className="criteria-input">
                     <select defaultValue={this.props.status} onChange={this.onChange}>

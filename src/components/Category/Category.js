@@ -19,12 +19,16 @@ class Category extends Component {
         return(
             <div className="category">
             <table>
-                <tr>
-                    <th colspan="4"><h1>{this.props.categoryName}</h1></th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th colSpan="6"><h1>{this.props.categoryName}</h1></th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td> {subCategoriesAry}</td>
                 </tr>
+                </tbody>
             </table>
             </div>
         )
@@ -32,22 +36,4 @@ class Category extends Component {
 }
 
 export default Category;
-
-<table style="width:100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
-</table>
 
