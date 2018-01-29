@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Category from './components/Category/Category';
-
 import {
     BrowserRouter as Router,
     Link,
@@ -44,15 +43,16 @@ class App extends Component {
         for (let i = 0; i < this.state.data.length; i++) {
             let cat = this.state.data[i];
 
-            links.push(<Link key={i} to={`/cat${i + 1}`}>{cat.CategoryName}</Link>);
+            links.push(<li  key={i}><Link to={`/cat${i + 1}`}>{cat.CategoryName}</Link></li>);
             let catProps = {
                 key: i,
                 categoryName: cat.CategoryName,
                 subCategoriesData: cat.SubCategories,
                 criteriaStatusChangeHandler: this.criteriaStatusChangeHandler
             }
+            // routes.push(<Route exact path='/' key={0} component={Category}/>)
             routes.push(
-                <Route key={i} path={`/cat${i + 1}`} render={(routeProps) => (
+                <Route key={i+1} path={`/cat${i + 1}`} render={(routeProps) => (
                     <Category {...routeProps} {...catProps} />                    
                 )} />
             )
@@ -61,12 +61,17 @@ class App extends Component {
         return(
             <div>
                 <Router>
-                    <div>
-                        <div className ="category-tabs"> {links} </div>
+                    <div className="container" >
+                        <div className="category-tabs"><ul> {links} </ul></div>
                         <Switch>
                             {routes}
+                            {/* <Route exact path='/' component={Category}/> */}
+                            {/* <Route path='/'>
+                                <DefaultRoute handler={routes[0]} />
+                            </Route> */}
                         </Switch>
                     </div>
+                    
                 </Router>
             </div>
         )

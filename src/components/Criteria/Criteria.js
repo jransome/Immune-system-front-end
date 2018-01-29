@@ -19,7 +19,6 @@ class Criteria extends Component {
                         <option value="2" >Done</option> 
                         <option value="1" >In Progress</option>
                         <option value="0" >Not Done</option>
-                        <option value="-1" >N/A</option>
                     </select>
                 </div>
             </div>

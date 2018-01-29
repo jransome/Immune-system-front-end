@@ -5,18 +5,14 @@ body {
 }
 
 .category {
-  /* color: white; */
-  /* background-color:rgb(0, 0, 0); */
+  position: relative;
   border-style: solid;
   text-align: center;
   margin: 10px;
   height: 100%;
-  display: -webkit-inline-flex
 }
 
 .sub-category {
-  /* color: white; */
-  /* background-color:rgb(0, 0, 0); */
   border-style: solid;
   text-align: center;
   margin: 10px;
@@ -25,8 +21,6 @@ body {
 }
 
 .criteria {
-  /* color: rgb(255, 255, 255); */
-  /* background-color: rgb(32, 29, 43); */
   border-style: solid;
   font-size: 14pt;
   margin: 10px;
@@ -54,5 +48,19 @@ body {
 
 td {
   display: -webkit-inline-flex;
+}
+
+.container {
+  position: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.category-tabs {
+  height: 100%;
+  width: 160px;
+  background-color: rgb(134, 134, 134);
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
