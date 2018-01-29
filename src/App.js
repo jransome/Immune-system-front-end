@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import Category from './components/Category/Category';
 
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch
+} from 'react-router-dom';
+
 class App extends Component {
     constructor(props){
         super();
@@ -29,23 +36,38 @@ class App extends Component {
         )
     }
 
+
     render() {
-        const categories = [];
+        const links = [];
+        const routes = [];
+
         for (let i = 0; i < this.state.data.length; i++) {
             let cat = this.state.data[i];
-            categories.push(
-                <Category 
-                    key={i} 
-                    categoryName={cat.CategoryName} 
-                    subCategoriesData={cat.SubCategories} 
-                    criteriaStatusChangeHandler={this.criteriaStatusChangeHandler}
-                />
+
+            links.push(<Link key={i} to={`/cat${i + 1}`}>{cat.CategoryName}</Link>);
+            let catProps = {
+                key: i,
+                categoryName: cat.CategoryName,
+                subCategoriesData: cat.SubCategories,
+                criteriaStatusChangeHandler: this.criteriaStatusChangeHandler
+            }
+            routes.push(
+                <Route key={i} path={`/cat${i + 1}`} render={(routeProps) => (
+                    <Category {...routeProps} {...catProps} />                    
+                )} />
             )
         }
 
         return(
-            <div className="categories">
-                { categories }
+            <div>
+                <Router>
+                    <div>
+                        <div className ="category-tabs"> {links} </div>
+                        <Switch>
+                            {routes}
+                        </Switch>
+                    </div>
+                </Router>
             </div>
         )
     }
