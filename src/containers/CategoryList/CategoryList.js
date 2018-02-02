@@ -12,7 +12,6 @@ class CategoryList extends Component {
                 <li
                     key={category.name}
                     onClick={() => this.props.selectCategory(category)}
-                    className="list-group-item"
                 >
                     {category.name}
                 </li>

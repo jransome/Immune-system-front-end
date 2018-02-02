@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import CategoryList from './containers/CategoryList/CategoryList';
-import CategoryDetail from './containers/CategoryDetail/CategoryDetail';
+import SubCategoryList from './containers/SubCategoryList/SubCategoryList';
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <CategoryList />
-        <CategoryDetail />
+        <SubCategoryList />
       </div>
     );
   }
