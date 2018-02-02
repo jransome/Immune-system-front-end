@@ -3,7 +3,7 @@ export function categories(){
         {
             1: { 
                 name: 'Customer',
-                subCategories: [1,2]
+                subCategories: [1, 2]
             },
             2: {
                 name: 'Governance',
@@ -18,15 +18,15 @@ export function subCategories(){
         {
             1: { 
                 name: 'Customer sub cat 1',
-                criteria: [1,2]
+                criteria: [1, 2]
             },
             2: {
                 name: 'Customer sub cat 2',
-                criteria: [3, 6, 1, 7]
+                criteria: [3]
             },
             3: { 
                 name: 'Goverance sub cat 1',
-                criteria: [4,9,11]
+                criteria: [4]
             },
         }
     )

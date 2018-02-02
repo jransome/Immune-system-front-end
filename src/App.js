@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CategoryList from './containers/CategoryList/CategoryList';
 import SubCategoryList from './containers/SubCategoryList/SubCategoryList';
+import Window from './containers/Window/Window';
 
 export default class App extends Component {
   render() {
@@ -8,6 +9,7 @@ export default class App extends Component {
       <div>
         <CategoryList />
         <SubCategoryList />
+        <Window />
       </div>
     );
   }
