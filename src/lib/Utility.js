@@ -1,24 +1,24 @@
 import React from 'react';
 
-export function getAllListElements(objectList, onClickFunction){
-    let listArray = [];
-    for(let objectID in objectList){
-        let object = objectList[objectID];
-        listArray.push(
-            createListElement(object, onClickFunction)
-        );
-    }
-    return listArray;
-}
-
 export function getListElements(objectList, onClickFunction, IDsArray){
     let listArray = [];
-    IDsArray.forEach(id => {
-        let object = objectList[id];
-        listArray.push(
-            createListElement(object, onClickFunction)
-        )
-    });
+
+    // If an array of IDs is passed return only the objects for that ID otherwise return all objects
+    if(IDsArray){
+        IDsArray.forEach(id => {
+            let object = objectList[id];
+            listArray.push(
+                createListElement(object, onClickFunction)
+            )
+        });
+    } else {
+        for(let objectID in objectList){
+            let object = objectList[objectID];
+            listArray.push(
+                createListElement(object, onClickFunction)
+            );
+        }
+    }
     return listArray;
 }
 
