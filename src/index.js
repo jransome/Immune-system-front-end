@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { BACKEND_DATA } from './Constants'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 
+import App from './App';
+import reducers from './reducers/';
+
+const createStoreWithMiddleware = applyMiddleware()(createStore);
+
 ReactDOM.render(
-    <App data={BACKEND_DATA} />, document.getElementById('root')
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>
+  , document.querySelector('#root')
 );
+
 registerServiceWorker();
