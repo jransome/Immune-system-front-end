@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getListElements } from '../../lib/Utility';
+import { selectSubCategory } from '../../actions/SubCategoryActions';
+import { bindActionCreators } from 'redux';
+
 
 class SubCategoryList extends Component {
     render() {
@@ -9,10 +12,9 @@ class SubCategoryList extends Component {
                  <div> Select to a category to get </div>
             );
         }
-        
         return (
             <div>
-                <div>SubCategories: {getListElements(this.props.subCategories, ()=>{}, this.props.category.subCategories)}</div>
+                <div>SubCategories: {getListElements(this.props.subCategories, this.props.selectSubCategory, this.props.category.subCategories)}</div>
             </div>
         );
     }
@@ -26,4 +28,9 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(SubCategoryList);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ selectSubCategory: selectSubCategory }, dispatch)
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SubCategoryList);
