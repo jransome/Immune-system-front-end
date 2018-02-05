@@ -8,6 +8,18 @@ export function categories(){
             2: {
                 name: 'Governance',
                 subCategories: [3]
+            },
+            3: {
+                name: 'Security',
+                subCategories: [3]
+            },
+            4: {
+                name: 'Scalability',
+                subCategories: [3]
+            },
+            5: {
+                name: 'Stability',
+                subCategories: [1,2,3,4,5,6]
             }
         }
     )
@@ -26,6 +38,18 @@ export function subCategories(){
             },
             3: { 
                 name: 'Goverance sub cat 1',
+                criteria: [4]
+            },
+            4: { 
+                name: 'Goverance sub cat 2',
+                criteria: [4]
+            },
+            5: { 
+                name: 'Goverance sub cat 3',
+                criteria: [4]
+            },
+            6: { 
+                name: 'Goverance sub cat 4',
                 criteria: [4]
             },
         }

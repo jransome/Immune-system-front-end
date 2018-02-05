@@ -2,15 +2,26 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  height: 100%;
+}
+
 body {
   padding: 10px;
   font-family: sans-serif;
+  height: 100%;
 }
 
-ul  {
+ul {
   list-style-type: none;
 }
 
+#app-container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
 /* .criteria {
   border-style: solid;
   font-size: 14pt;
@@ -20,6 +31,17 @@ ul  {
   width: 200px;
   text-align: center;
 } */
+
+.left {
+  flex-shrink: 0.5;
+  height: 100%;
+  background-color: green;
+}
+
+.right {
+  flex: 1.5;
+  background-color: aquamarine
+}
 
 .done {
   border-color: green;
@@ -43,14 +65,6 @@ ul  {
   display: flex;
   overflow: hidden;
 }
-
-/* .category-tabs {
-  height: 100%;
-  width: 160px;
-  background-color: rgb(134, 134, 134);
-  overflow-x: hidden;
-  padding-top: 20px;
-} */
 
 .tab-panel {
   overflow: hidden;
@@ -78,5 +92,6 @@ ul  {
 }
 
 .nav-bar {
-  display: inline-flex
+  display: inline-flex;
+  height: 100%;
 }
