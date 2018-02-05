@@ -42,7 +42,7 @@ export function subCategories(){
             },
             4: { 
                 name: 'Goverance sub cat 2',
-                criteria: [4]
+                criteria: [1, 2, 3, 4]
             },
             5: { 
                 name: 'Goverance sub cat 3',

@@ -5,12 +5,15 @@
 
 html {
   height: 100%;
+  background-color: rgb(128, 0, 0);
 }
 
 body {
-  padding: 10px;
+  margin: 10px;
   font-family: sans-serif;
-  height: 100%;
+  background-color: rgb(128, 73, 0);
+  
+  /* height: 100%; */
 }
 
 ul {
@@ -18,29 +21,27 @@ ul {
 }
 
 #app-container {
-  display: flex;
-  height: 100%;
-  overflow: hidden;
+  /* display: flex;
+  flex-direction: row;
+  height: 100%; */
+  /* overflow: hidden; */
+  background-color: rgb(67, 195, 199);
+  
 }
-/* .criteria {
-  border-style: solid;
-  font-size: 14pt;
-  margin: 10px;
-  padding: 25px;
-  height: 100%;
-  width: 200px;
-  text-align: center;
-} */
 
 .left {
-  flex-shrink: 0.5;
-  height: 100%;
+  /* flex-basis: 0.2; */
+  /* height: 100%; */
+  display: inline-flex;
   background-color: green;
 }
 
 .right {
-  flex: 1.5;
-  background-color: aquamarine
+  display: inline-flex;
+  
+  /* flex-basis: 0.8; */
+  /* height: 100%; */
+  background-color: rgb(255, 157, 127)
 }
 
 .done {
@@ -59,28 +60,20 @@ ul {
   border-color: gray;
 }
 
-
-.container {
-  position: auto;
-  display: flex;
-  overflow: hidden;
-}
-
 .tab-panel {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  margin: 0;
+  /* background-color: #f1f1f1; */
 }
 
 .tab-items{
-    background-color: inherit;
-    display: block;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
+  background-color: inherit;
+  /* display: inline-block; */
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
 .tab-items:hover {
@@ -95,3 +88,13 @@ ul {
   display: inline-flex;
   height: 100%;
 }
+
+/* .criteria {
+  border-style: solid;
+  font-size: 14pt;
+  margin: 10px;
+  padding: 25px;
+  height: 100%;
+  width: 200px;
+  text-align: center;
+} */

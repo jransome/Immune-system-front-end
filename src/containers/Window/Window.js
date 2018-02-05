@@ -5,6 +5,7 @@ import { getListElements } from '../../lib/Utility';
 
 class Window extends Component {
     render() {
+        console.log(this.props.activeSubCategory);
         if (!this.props.activeSubCategory) {
             return(
                  <div> Select to a category and sub category to get </div>
@@ -12,9 +13,9 @@ class Window extends Component {
         }
 
         return (
-            <div>
+            <ul>
                 {getListElements(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
-            </div>
+            </ul>
         );
     }
 }

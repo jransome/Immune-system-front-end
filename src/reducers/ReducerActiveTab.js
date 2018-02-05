@@ -4,6 +4,7 @@ export default function(previousState = initialState, action) {
     switch (action.type) {
         case 'CATEGORY_SELECTED':
             newState.activeCategory = action.payload;
+            newState.activeSubCategory = null;
             return newState;
         case 'SUBCATEGORY_SELECTED':
             newState.activeSubCategory = action.payload;
