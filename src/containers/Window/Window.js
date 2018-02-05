@@ -17,18 +17,13 @@ class Window extends Component {
             </div>
         );
     }
-
 }
 
 function mapStateToProps(state) {
     return {
-        activeSubCategory: state.activeSubCategory,
+        activeSubCategory: state.activeTab.activeSubCategory,
         criteria: state.criteria
     }
 }
-
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({ selectSubCategory: selectSubCategory }, dispatch)
-// }
 
 export default connect(mapStateToProps)(Window);

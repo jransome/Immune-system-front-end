@@ -23,7 +23,7 @@ class SubCategoryList extends Component {
 
 function mapStateToProps(state) {
     return {
-        category: state.activeCategory,
+        category: state.activeTab.activeCategory,
         subCategories: state.subCategories
     }
 }

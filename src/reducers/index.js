@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
-import ActiveCategory from './ReducerActiveCategory';
-import ActiveSubCategory from './ReducerActiveSubCategory';
+import ActiveTab from './ReducerActiveTab';
 import { categories, subCategories, criteria } from './backend_data';
 
 const rootReducer = combineReducers({
-  activeCategory: ActiveCategory,
-  activeSubCategory: ActiveSubCategory,
+  activeTab: ActiveTab,
   categories: categories,
   subCategories: subCategories,
   criteria: criteria
