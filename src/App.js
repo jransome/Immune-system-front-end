@@ -6,7 +6,7 @@ import Window from './containers/Window/Window';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div id="app-container">
         <div className="left">
           <div className="nav-bar">
             <CategoryList />

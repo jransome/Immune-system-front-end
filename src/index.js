@@ -14,7 +14,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <App />
   </Provider>
-  , document.querySelector('#app-container')
+  , document.querySelector('body')
 );
 
 registerServiceWorker();

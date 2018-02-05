@@ -9,7 +9,7 @@ class SubCategoryList extends Component {
     render() {
         if (!this.props.category) {
             return(
-                 <div> Select to a category to get </div>
+                 <div className="tab-panel"> Select to a category to get </div>
             );
         }
         return (
