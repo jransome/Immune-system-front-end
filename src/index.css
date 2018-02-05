@@ -1,5 +1,8 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+body {
   padding: 10px;
   font-family: sans-serif;
 }
@@ -8,23 +11,7 @@ ul  {
   list-style-type: none;
 }
 
-.category {
-  position: relative;
-  border-style: solid;
-  text-align: center;
-  margin: 10px;
-  height: 100%;
-}
-
-.sub-category {
-  border-style: solid;
-  text-align: center;
-  margin: 10px;
-  height: 100%;
-  width: 275px;
-}
-
-.criteria {
+/* .criteria {
   border-style: solid;
   font-size: 14pt;
   margin: 10px;
@@ -32,7 +19,7 @@ ul  {
   height: 100%;
   width: 200px;
   text-align: center;
-}
+} */
 
 .done {
   border-color: green;
@@ -50,9 +37,6 @@ ul  {
   border-color: gray;
 }
 
-td {
-  display: -webkit-inline-flex;
-}
 
 .container {
   position: auto;
@@ -78,7 +62,7 @@ td {
 .tab-items{
     background-color: inherit;
     display: block;
-    border: none;
+    border-bottom: 1px solid #ccc;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
