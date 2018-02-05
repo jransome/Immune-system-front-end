@@ -14,7 +14,7 @@ class CategoryList extends Component {
 
     render() {
         return (
-            <ul className="list-group col-sm-4">
+            <ul className="tab-panel">
                 {getListElements(this.props.categories, this.onClickHandler)}
             </ul>
 

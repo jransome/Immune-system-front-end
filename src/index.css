@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+ul  {
+  list-style-type: none;
+}
+
 .category {
   position: relative;
   border-style: solid;
@@ -56,11 +60,39 @@ td {
   overflow: hidden;
 }
 
-.category-tabs {
+/* .category-tabs {
   height: 100%;
   width: 160px;
   background-color: rgb(134, 134, 134);
   overflow-x: hidden;
   padding-top: 20px;
+} */
+
+.tab-panel {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin: 0;
 }
 
+.tab-items{
+    background-color: inherit;
+    display: block;
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab-items:hover {
+  background-color: #ddd;
+}
+
+.tab-items:active {
+  background-color: rgb(0, 59, 252);
+}
+
+.nav-bar {
+  display: inline-flex
+}

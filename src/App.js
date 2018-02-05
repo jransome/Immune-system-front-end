@@ -7,8 +7,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <CategoryList />
-        <SubCategoryList />
+        <div className="nav-bar">
+          <CategoryList />
+          <SubCategoryList />
+        </div>
         <Window />
       </div>
     );

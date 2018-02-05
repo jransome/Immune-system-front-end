@@ -24,7 +24,7 @@ export function getListElements(objectList, onClickFunction, IDsArray){
 
 function createListElement(object, onClickFunction){
     return (
-        <li
+        <li className="tab-items"
             key={object.name}
             onClick={() => onClickFunction(object)}
         >

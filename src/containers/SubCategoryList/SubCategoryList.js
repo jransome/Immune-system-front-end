@@ -13,9 +13,9 @@ class SubCategoryList extends Component {
             );
         }
         return (
-            <div>
-                <div>SubCategories: {getListElements(this.props.subCategories, this.props.selectSubCategory, this.props.category.subCategories)}</div>
-            </div>
+            <ul className="tab-panel">
+                {getListElements(this.props.subCategories, this.props.selectSubCategory, this.props.category.subCategories)}
+            </ul>
         );
     }
 

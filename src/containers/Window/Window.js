@@ -13,7 +13,7 @@ class Window extends Component {
 
         return (
             <div>
-                Criteria: {getListElements(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
+                {getListElements(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
             </div>
         );
     }
