@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getListElements } from '../../lib/Utility';
 import { selectSubCategory } from '../../actions/SubCategoryActions';
 import { bindActionCreators } from 'redux';
+import { getListElements } from '../../helpers/GetListElements';
 
 
 class SubCategoryList extends Component {

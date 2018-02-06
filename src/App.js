@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CategoryList from './containers/CategoryList/CategoryList';
 import SubCategoryList from './containers/SubCategoryList/SubCategoryList';
-import Window from './containers/Window/Window';
+import CriteriaWindow from './containers/CriteriaWindow/CriteriaWindow';
 
 export default class App extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class App extends Component {
           </div>
         </div>
         <div className="right">
-          <Window />
+          <CriteriaWindow />
         </div>
       </div>
     );

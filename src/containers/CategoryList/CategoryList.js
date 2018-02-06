@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { selectCategory } from '../../actions/CategoryActions';
 import { bindActionCreators } from 'redux';
-import { getListElements } from '../../lib/Utility';
+import { getListElements } from '../../helpers/GetListElements';
 
 class CategoryList extends Component {
     render() {

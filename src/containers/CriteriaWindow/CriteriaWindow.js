@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getListElements } from '../../lib/Utility';
+import { getCriteriaCards } from '../../helpers/GetCriteriaCards';
 
-class Window extends Component {
+class CriteriaWindow extends Component {
     render() {
-        console.log(this.props.activeSubCategory);
         if (!this.props.activeSubCategory) {
             return(
                  <div> Select to a category and sub category to get </div>
@@ -14,7 +13,7 @@ class Window extends Component {
 
         return (
             <ul>
-                {getListElements(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
+                {getCriteriaCards(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
             </ul>
         );
     }
@@ -27,4 +26,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Window);
+export default connect(mapStateToProps)(CriteriaWindow);
