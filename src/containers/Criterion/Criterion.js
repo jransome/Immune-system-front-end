@@ -19,11 +19,58 @@ class Criterion extends Component {
             <div className="criterion">
                 { this.props.criterion.name }
                 <div className="criteria-input">
-                    <select defaultValue={this.props.criterion.status} onChange={this.onChange}>
+
+                <input type="checkbox" />
+  
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                        Not done <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Yes</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">No</a></li>>
+                    </ul>
+                </div>
+
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        In progress<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <input type="checkbox" />
+                        <li><a href="#">Yes</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">No</a></li>
+                    </ul>
+                </div>
+
+                <span class="input-group-addon">
+                    <input type="checkbox" />
+                </span>
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+                        Yes <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    <span class="input-group-addon">
+                    <input type="checkbox" />
+                </span>
+                        <li role="separator" class="divider"></li>
+                        <span class="input-group-addon">
+                    <input type="checkbox" />
+                </span><span class="input-group-addon">
+                    <input type="checkbox" />
+                </span>
+                    </ul>
+                </div>
+                <input type="checkbox" />
+
+                    {/* <select defaultValue={this.props.criterion.status} onChange={this.onChange}>
                         <option value="2" >Done</option> 
                         <option value="1" >In Progress</option>
                         <option value="0" >Not Done</option>
-                    </select>
+                    </select> */}
                 </div>
             </div>
         )
