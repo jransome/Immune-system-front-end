@@ -26,26 +26,31 @@ ul {
 
 #app-container {
   height: inherit;
+  display: flex;
   background-color: rgb(67, 195, 199);
 }
 
 .left {
   height: inherit;
-  
-  display: inline-flex;
+  width: auto;
   background-color: green;
 }
 
 .right {
   height: inherit;
-  
-  display: inline-flex;
+  flex: 1;
   background-color: rgb(255, 157, 127)
 }
 
 .nav-bar {
   height: inherit;  
-  display: inline-flex;
+  display: flex;
+}
+
+.tab-panel {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  /* background-color: #f1f1f1; */
 }
 
 .tab-items{
@@ -65,8 +70,6 @@ ul {
   background-color: rgb(0, 59, 252);
 }
 
-
-
 .done {
   border-color: green;
 }
@@ -83,22 +86,14 @@ ul {
   border-color: gray;
 }
 
-.tab-panel {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  /* background-color: #f1f1f1; */
-}
 
 
-
-
-
-/* .criteria {
+.criterion {
   border-style: solid;
   font-size: 14pt;
   margin: 10px;
   padding: 25px;
-  height: 100%;
   width: 200px;
   text-align: center;
-} */
+  display: inline-block;
+}

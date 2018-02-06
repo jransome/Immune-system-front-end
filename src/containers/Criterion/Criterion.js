@@ -16,15 +16,15 @@ class Criterion extends Component {
     render(){
         return(
             // <div className={`criteria ${this.getCritStatusStyle(this.props.status)}`}>
-            <div>
+            <div className="criterion">
                 { this.props.criterion.name }
-                {/* <div className="criteria-input">
-                    <select defaultValue={this.props.status} onChange={this.onChange}>
+                <div className="criteria-input">
+                    <select defaultValue={this.props.criterion.status} onChange={this.onChange}>
                         <option value="2" >Done</option> 
                         <option value="1" >In Progress</option>
                         <option value="0" >Not Done</option>
                     </select>
-                </div> */}
+                </div>
             </div>
         )
     }

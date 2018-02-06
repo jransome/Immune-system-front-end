@@ -7,7 +7,7 @@ class CriteriaWindow extends Component {
     render() {
         if (!this.props.activeSubCategory) {
             return(
-                 <div> Select to a category and sub category to get </div>
+                 <div> </div>
             );
         }
 
