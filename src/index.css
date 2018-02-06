@@ -32,7 +32,7 @@ ul {
 
 .left {
   height: inherit;
-  width: auto;
+  min-width: fit-content;
   background-color: green;
 }
 
