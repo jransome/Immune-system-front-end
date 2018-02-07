@@ -3,20 +3,18 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getCriteriaCards } from '../../helpers/GetCriteriaCards';
 
-class CriteriaWindow extends Component {
-    render() {
-        if (!this.props.activeSubCategory) {
-            return(
-                 <div> </div>
-            );
-        }
-
-        return (
-            <div className="criteria-window">
-                {getCriteriaCards(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
-            </div>
+const CriteriaWindow = (props) => {
+    if (!props.activeSubCategory) {
+        return(
+             <div> </div>
         );
     }
+    
+    return (
+        <div className="criteria-window">
+            {getCriteriaCards(props.criteria, ()=>{}, props.activeSubCategory.criteria)}
+        </div>
+    );
 }
 
 function mapStateToProps(state) {

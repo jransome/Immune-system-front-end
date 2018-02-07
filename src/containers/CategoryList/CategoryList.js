@@ -4,15 +4,11 @@ import { selectCategory } from '../../actions/CategoryActions';
 import { bindActionCreators } from 'redux';
 import { getListElements } from '../../helpers/GetListElements';
 
-class CategoryList extends Component {
-    render() {
-        return (
-            <ul className="tab-panel">
-                {getListElements(this.props.categories, this.props.selectCategory)}
-            </ul>
-        )
-    }
-}
+const CategoryList = (props) => (
+    <ul className="tab-panel">
+        {getListElements(props.categories, props.selectCategory)}
+    </ul>
+)
 
 function mapStateToProps(state) {
     return {
