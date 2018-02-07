@@ -100,7 +100,7 @@ ul {
   background-color: rgb(57, 75, 87);
   position: relative;
 }
-.col-bottom {
+.card-bottom {
   position: relative;
   bottom: 0px;
   width: 100%;
@@ -108,6 +108,6 @@ ul {
 
 .criterion-text {
   font-size: 14pt;
-  height: 150px;
+  height: 130px;
   position: static;
 }
