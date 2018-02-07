@@ -16,6 +16,10 @@ body {
   
 }
 
+a {
+  color: black;
+}
+
 ul {
   list-style-type: none;
 }
@@ -40,7 +44,7 @@ ul {
   height: inherit;
   overflow: scroll;
   flex: 1;
-  background-color: rgb(102, 101, 101);
+  background-color: rgb(197, 197, 197);
   overflow-x: scroll;
 }
 
@@ -97,16 +101,25 @@ ul {
   position: relative;
   display: inline-block;
   border-style: solid;
+  border-color: green;
+  border-width: 5px;
   margin: 10px;
   height: 200px;
   width: 300px;
   text-align: center;
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
 }
 
 .criterion-name {
   padding: 20px;
   width: 85%;
+  font-size: 13pt;
+}
+
+.criterion-info-link {
+  position: absolute;
+  top: 4px;
+  left: 7px;
 }
 
 .criterion-input {
@@ -114,6 +127,22 @@ ul {
   right: 0px;
   padding-right: 15px;
   width: fit-content;
+}
+
+/* .icon-done {
+  color: green;
+}
+
+.icon-in-progress {
+  color: yellow;
+}
+
+.icon-not-done {
+  color: red;
+} */
+
+.btn {
+  background-color: rgb(241, 241, 241)
 }
 
 .glyphicon {

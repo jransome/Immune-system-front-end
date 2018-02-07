@@ -61,27 +61,33 @@ export function criteria(){
         {
             1: { 
                 name: 'All Live Code is using tech listed as adopted or decommissioned in the Technology Radar unless it is an approved trial',
-                status: 1
+                status: 1,
+                link: "http://internet.com.co.uk.org"
             },
             2: { 
                 name: 'Key technology changes are reviewed in the team, tech forum or Design Authority',
-                status: 2
+                status: 2,
+                link: "http://internet.com.co.uk.org"                
             },
             3: { 
                 name: 'OS are patched by the end of the calendar month',
-                status: 3
+                status: 3,
+                link: "http://internet.com.co.uk.org"
             },
             4: { 
                 name: 'No Critical / High Vulnerabilities Open',
-                status: 4
+                status: 4,
+                link: "http://internet.com.co.uk.org"
             },
             5: { 
                 name: "'All actions from the 'Risk Awareness - Data Mapping' session have been completed.",
-                status: 4
+                status: 4,
+                link: "http://internet.com.co.uk.org"
             },
             6: { 
                 name: 'Availability = 99.99%',
-                status: 4
+                status: 4,
+                link: "http://internet.com.co.uk.org"                
             }
         }
     )
