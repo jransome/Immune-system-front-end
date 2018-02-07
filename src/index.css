@@ -5,7 +5,7 @@
 
 html {
   height: 100%;
-  background-color: rgb(128, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 body {
@@ -39,7 +39,7 @@ ul {
 .right {
   height: inherit;
   flex: 1;
-  background-color: rgb(255, 157, 127)
+  background-color: rgb(102, 101, 101)
 }
 
 .nav-bar {
@@ -50,7 +50,7 @@ ul {
 .tab-panel {
   overflow: hidden;
   border: 1px solid #ccc;
-  /* background-color: #f1f1f1; */
+  background-color: #f1f1f1;
 }
 
 .tab-items{
@@ -86,12 +86,12 @@ ul {
   border-color: gray;
 }
 
-.criterion {
+/* .criterion {
   border-style: solid;
   font-size: 14pt;
   margin: 10px;
-  padding: 25px;
+  padding: 10px;
   width: 200px;
   text-align: center;
   display: inline-block;
-}
+} */

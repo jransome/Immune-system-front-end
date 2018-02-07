@@ -25,7 +25,7 @@ export function getCriteriaCards(objectList, onClickFunction, IDsArray){
 
 function createCriterionCard(object, onClickFunction, objectID=object.name){
     return (
-        <Criterion className="criterion-card"
+        <Criterion
             key={objectID}
             id={objectID}
             onClick={() => onClickFunction(object)}
