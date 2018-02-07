@@ -94,7 +94,7 @@ ul {
 }
 
 .criteria-window {
-  /* overflow: scroll; */
+  padding: 10px;
 }
 
 .criterion {
