@@ -3,20 +3,18 @@ import CategoryList from './containers/CategoryList/CategoryList';
 import SubCategoryList from './containers/SubCategoryList/SubCategoryList';
 import CriteriaWindow from './containers/CriteriaWindow/CriteriaWindow';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div id="app-container">
+const App = () => (
+    <div id="app-container">
         <div className="left">
-          <div className="nav-bar">
-            <CategoryList />
-            <SubCategoryList />
-          </div>
+            <div className="nav-bar">
+                <CategoryList />
+                <SubCategoryList />
+            </div>
         </div>
         <div className="right">
-          <CriteriaWindow />
+            <CriteriaWindow />
         </div>
-      </div>
-    );
-  }
-}
+    </div>
+)
+
+export default App;

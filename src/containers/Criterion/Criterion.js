@@ -4,36 +4,26 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // import { STATUS_TO_CLASS } from '../../Constants'
 
-class Criterion extends Component {
-    // onChange = (event) => {
-    //     this.props.criteriaStatusChangeHandler(this.props.id, parseInt(event.target.value));
-    // }
-    
-    // getCritStatusStyle = (status) => {
-    //     return STATUS_TO_CLASS[status];
-    // }
-
-    render(){
-        return(
-            // <div className={`criteria ${this.getCritStatusStyle(this.props.status)}`}>
-            <div className="criterion">
-                <div className="card-top">
-                    <div className="criterion-text">{ this.props.criterion.name } </div>
-                </div>
-                <div className="card-bottom">
-                    <div className="buttons btn-group btn-group-md"> 
-                        <button type="button" className="btn btn-default">Not Done</button>
-                        <button type="button" className="btn btn-default">In Progress</button>
-                        <button type="button" className="btn btn-default">Done</button>
-                    </div>
-                </div>
+const Criterion = (props) => (
+    <div className="criterion">
+        <div className="criterion-name vertical-centred">{ props.criterion.name } </div>
+        <div className="criterion-input vertical-centred">
+            <div className="buttons btn-group-sm btn-group-vertical"> 
+                <button type="button" className="btn btn-default">
+                    <span className="glyphicon glyphicon-remove"></span>
+                </button>
+                <button type="button" className="btn btn-default">
+                    <span className="glyphicon glyphicon-hourglass"></span>                        
+                </button>
+                <button type="button" className="btn btn-default">
+                    <span className="glyphicon glyphicon-ok"></span>                            
+                </button>
             </div>
-        )
-    }
-}
+        </div>
+    </div>
+)
 
 function mapStateToProps(state, ownProps) {
-    console.log(ownProps)
     return {
         criterion: state.criteria[ownProps.id]
     }

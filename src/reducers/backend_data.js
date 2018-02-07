@@ -64,7 +64,7 @@ export function criteria(){
                 status: 1
             },
             2: { 
-                name: 'Criteria 2',
+                name: 'Key technology changes are reviewed in the team, tech forum or Design Authority',
                 status: 2
             },
             3: { 
@@ -72,7 +72,7 @@ export function criteria(){
                 status: 3
             },
             4: { 
-                name: 'Criteria 4',
+                name: 'No Critical / High Vulnerabilities Open',
                 status: 4
             },
             5: { 
@@ -80,7 +80,7 @@ export function criteria(){
                 status: 4
             },
             6: { 
-                name: 'Criteria 6',
+                name: 'Availability = 99.99%',
                 status: 4
             }
         }

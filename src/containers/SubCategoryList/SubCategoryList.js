@@ -4,21 +4,17 @@ import { selectSubCategory } from '../../actions/SubCategoryActions';
 import { bindActionCreators } from 'redux';
 import { getListElements } from '../../helpers/GetListElements';
 
-
-class SubCategoryList extends Component {
-    render() {
-        if (!this.props.category) {
-            return(
-                 <div className="tab-panel"> Select a category</div>
-            );
-        }
-        return (
-            <ul className="tab-panel">
-                {getListElements(this.props.subCategories, this.props.selectSubCategory, this.props.category.subCategories)}
-            </ul>
+const SubCategoryList = (props) => {
+    if (!props.category) {
+        return(
+             <div className="tab-panel"> Select a category</div>
         );
     }
-
+    return (
+        <ul className="tab-panel">
+            {getListElements(props.subCategories, props.selectSubCategory, props.category.subCategories)}
+        </ul>
+    );
 }
 
 function mapStateToProps(state) {
