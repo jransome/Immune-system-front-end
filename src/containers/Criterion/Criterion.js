@@ -17,10 +17,10 @@ class Criterion extends Component {
         return(
             // <div className={`criteria ${this.getCritStatusStyle(this.props.status)}`}>
             <div className="criterion row">
-                <div class="col">
+                <div class="col-top">
                     <div className="criterion-text">{ this.props.criterion.name } </div>
                 </div>
-                <div class="col">
+                <div class="col-bottom">
                     <div className="buttons btn-group btn-group-xs"> 
                         <button type="button" className="btn btn-default">Not Done</button>
                         <button type="button" className="btn btn-default">In Progress</button>

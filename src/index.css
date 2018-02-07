@@ -39,7 +39,8 @@ ul {
 .right {
   height: inherit;
   flex: 1;
-  background-color: rgb(102, 101, 101)
+  background-color: rgb(102, 101, 101);
+  overflow-x: scroll;
 }
 
 .nav-bar {
@@ -89,12 +90,23 @@ ul {
 
 .criterion {
   border-style: solid;
-  font-size: 14pt;
   margin: 10px;
   padding: 10px;
   height: 200px;
-  width: 250px;
+  width: 300px;
   text-align: center;
   display: inline-block;
   background-color: aqua;
+  position: relative;
+}
+.col-bottom {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+.criterion-text {
+  font-size: 14pt;
+  height: 150px;
+  position: static;
 }
