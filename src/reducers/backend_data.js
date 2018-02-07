@@ -60,7 +60,7 @@ export function criteria(){
     return(
         {
             1: { 
-                name: 'Criteria 1',
+                name: 'All Live Code is using tech listed as adopted or decommissioned in the Technology Radar unless it is an approved trial',
                 status: 1
             },
             2: { 
@@ -68,7 +68,7 @@ export function criteria(){
                 status: 2
             },
             3: { 
-                name: 'Criteria 3',
+                name: 'OS are patched by the end of the calendar month',
                 status: 3
             },
             4: { 
@@ -76,7 +76,7 @@ export function criteria(){
                 status: 4
             },
             5: { 
-                name: 'Criteria 5',
+                name: "'All actions from the 'Risk Awareness - Data Mapping' session have been completed.",
                 status: 4
             },
             6: { 

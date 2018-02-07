@@ -96,7 +96,8 @@ ul {
   width: 300px;
   text-align: center;
   display: inline-block;
-  background-color: aqua;
+  color: white;
+  background-color: rgb(57, 75, 87);
   position: relative;
 }
 .col-bottom {
