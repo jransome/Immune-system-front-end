@@ -8,14 +8,18 @@ class Criterion extends Component {
     render(){
         return(
             <div className="criterion">
-                <div className="col">
-                    <div className="criterion-text">{ this.props.criterion.name } </div>
-                </div>
-                <div className="col">
-                    <div className="buttons btn-group btn-group-xs"> 
-                        <button type="button" className="btn btn-default">Not Done</button>
-                        <button type="button" className="btn btn-default">In Progress</button>
-                        <button type="button" className="btn btn-default">Done</button>
+                <div className="criterion-name vertical-centred">{ this.props.criterion.name } </div>
+                <div className="criterion-input vertical-centred">
+                    <div className="buttons btn-group-sm btn-group-vertical"> 
+                        <button type="button" className="btn btn-default">
+                            <span className="glyphicon glyphicon-remove"></span>
+                        </button>
+                        <button type="button" className="btn btn-default">
+                            <span className="glyphicon glyphicon-hourglass"></span>                        
+                        </button>
+                        <button type="button" className="btn btn-default">
+                            <span className="glyphicon glyphicon-ok"></span>                            
+                        </button>
                     </div>
                 </div>
             </div>
