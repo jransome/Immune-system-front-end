@@ -5,7 +5,7 @@
 
 html {
   height: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(64, 196, 47);
 }
 
 body {
@@ -31,13 +31,14 @@ ul {
 }
 
 .left {
-  height: inherit;
+  height: inherit;   
   min-width: fit-content;
   background-color: green;
 }
 
 .right {
   height: inherit;
+  overflow: scroll;
   flex: 1;
   background-color: rgb(102, 101, 101)
 }
@@ -87,7 +88,12 @@ ul {
   border-color: gray;
 }
 
+.criteria-window {
+  /* overflow: scroll; */
+}
+
 .criterion {
+  display: inline-block;
   border-style: solid;
   font-size: 14pt;
   margin: 10px;
@@ -95,6 +101,5 @@ ul {
   height: 200px;
   width: 250px;
   text-align: center;
-  display: inline-block;
   background-color: aqua;
 }

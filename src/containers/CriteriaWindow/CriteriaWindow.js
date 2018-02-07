@@ -12,7 +12,7 @@ class CriteriaWindow extends Component {
         }
 
         return (
-            <div className="card-deck">
+            <div className="criteria-window">
                 {getCriteriaCards(this.props.criteria, ()=>{}, this.props.activeSubCategory.criteria)}
             </div>
         );
