@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { selectSubCategory } from '../../actions/SubCategoryActions';
 import { bindActionCreators } from 'redux';
-// import { STATUS_TO_CLASS } from '../../Constants'
 
 class Criterion extends Component {
     // onChange = (event) => {
