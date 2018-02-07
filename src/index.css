@@ -48,6 +48,7 @@ ul {
 }
 
 .tab-panel {
+  height: inherit;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -86,12 +87,14 @@ ul {
   border-color: gray;
 }
 
-/* .criterion {
+.criterion {
   border-style: solid;
   font-size: 14pt;
   margin: 10px;
   padding: 10px;
-  width: 200px;
+  height: 200px;
+  width: 250px;
   text-align: center;
   display: inline-block;
-} */
+  background-color: aqua;
+}
