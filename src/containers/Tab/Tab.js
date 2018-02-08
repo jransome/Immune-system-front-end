@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Tab = (props) => (
-    <div 
-        className="tab-item" 
+    <div
+        className="tab-items" 
         onClick={props.onClickFunction}
     >
-    {props.name}
-
+        {props.name}
     </div>
 )
 
@@ -23,6 +22,7 @@ const Tab = (props) => (
 // }
 
 // export default connect(mapStateToProps, mapDispatchToProps)(CategoryList)
+
 Tab.propTypes = {
     onClick      : PropTypes.func,
     tabIndex     : PropTypes.number,

@@ -1,5 +1,5 @@
 import React from 'react';
-// import Tab from '../containers/Tab/Tab';
+import Tab from '../containers/Tab/Tab';
 
 
 export function getListElements(objectList, onClickFunction, IDsArray){
@@ -26,11 +26,10 @@ export function getListElements(objectList, onClickFunction, IDsArray){
 
 function createListElement(object, onClickFunction){
     return (
-        <li className="tab-items"
+        <Tab
             key={object.name}
-            onClick={() => onClickFunction(object)}
-        >
-            {object.name}
-        </li>
+            onClickFunction={() => onClickFunction(object)}
+            name={object.name}
+        />
     )
 }
