@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Tab = (props) => (
@@ -6,6 +7,7 @@ const Tab = (props) => (
         className="tab-item" 
         onClick={props.onClickFunction}
     >
+    {props.name}
 
     </div>
 )
@@ -21,4 +23,11 @@ const Tab = (props) => (
 // }
 
 // export default connect(mapStateToProps, mapDispatchToProps)(CategoryList)
+Tab.propTypes = {
+    onClick      : PropTypes.func,
+    tabIndex     : PropTypes.number,
+    isActive     : PropTypes.bool,
+    name         : PropTypes.string.isRequired
+};
+
 export default Tab;

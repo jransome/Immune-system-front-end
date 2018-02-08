@@ -1,4 +1,6 @@
 import React from 'react';
+// import Tab from '../containers/Tab/Tab';
+
 
 export function getListElements(objectList, onClickFunction, IDsArray){
     let listArray = [];
