@@ -3,7 +3,7 @@ import Criterion from '../containers/Criterion/Criterion';
 
 export function getCriteriaCards(objectList, onClickFunction, IDsArray){
     let criteriaArray = [];
-
+    
     // If an array of IDs is passed return only the objects for that ID otherwise return all objects
     if(IDsArray){
         IDsArray.forEach(id => {

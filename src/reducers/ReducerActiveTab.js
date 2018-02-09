@@ -3,11 +3,11 @@ export default function(previousState = initialState, action) {
     let newState = previousState;
     switch (action.type) {
         case 'CATEGORY_SELECTED':
-            newState.activeCategory = action.payload;
-            newState.activeSubCategory = null;
+            newState.activeCategoryID = action.payload;
+            newState.activeSubCategoryID = null;
             return newState;
         case 'SUBCATEGORY_SELECTED':
-            newState.activeSubCategory = action.payload;
+            newState.activeSubCategoryID = action.payload;
             return newState;
         default:
             return previousState;
@@ -15,6 +15,6 @@ export default function(previousState = initialState, action) {
 }
 
 const initialState = {
-    activeCategory: null,
-    activeSubCategory: null
+    activeCategoryID: null,
+    activeSubCategoryID: null
 }

@@ -6,7 +6,7 @@ import { getListElements } from '../../helpers/GetListElements';
 
 const CategoryList = (props) => (
     <ul className="tab-panel">
-        {getListElements(props.categories, props.selectCategory)}
+        { getListElements(props.categories, props.selectCategory, true) }
     </ul>
 )
 
@@ -20,4 +20,4 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ selectCategory: selectCategory }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CategoryList)
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryList);

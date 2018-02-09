@@ -1,6 +1,6 @@
-export function selectSubCategory(subCategory) {
+export function selectSubCategory(subCategoryID) {
     return {
         type: 'SUBCATEGORY_SELECTED',
-        payload: subCategory
+        payload: subCategoryID
     };
 }

@@ -4,22 +4,22 @@ import { bindActionCreators } from 'redux';
 import { getCriteriaCards } from '../../helpers/GetCriteriaCards';
 
 const CriteriaWindow = (props) => {
-    if (!props.activeSubCategory) {
+    if (!props.activeSubCategoryID) {
         return(
              <div> </div>
         );
     }
-    
     return (
         <div className="criteria-window">
-            {getCriteriaCards(props.criteria, ()=>{}, props.activeSubCategory.criteria)}
+            {getCriteriaCards(props.criteria, ()=>{}, props.subCategories[props.activeSubCategoryID].criteria)}
         </div>
     );
 }
 
 function mapStateToProps(state) {
     return {
-        activeSubCategory: state.activeTab.activeSubCategory,
+        activeSubCategoryID: state.activeTab.activeSubCategoryID,
+        subCategories: state.subCategories,
         criteria: state.criteria
     }
 }

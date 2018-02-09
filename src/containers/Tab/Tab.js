@@ -11,11 +11,19 @@ const Tab = (props) => (
     </div>
 )
 
-// function mapStateToProps(state) {
-//     return {
-//         categories: state.categories
-//     };
-// }
+// TODO: change active tab store to be just id not whole object
+
+function mapStateToProps(state, ownProps) {
+    if(ownProps.isCategoryTab){
+        return {
+            activeCategory: state.activeTab.activeCategory
+        };
+    } else {
+        return {
+            activeSubCategory: state.activeTab.activeSubCategory
+        };
+    }
+}
 
 // function mapDispatchToProps(dispatch) {
 //     return bindActionCreators({ selectCategory: selectCategory }, dispatch);
@@ -27,7 +35,8 @@ Tab.propTypes = {
     onClick      : PropTypes.func,
     tabIndex     : PropTypes.number,
     isActive     : PropTypes.bool,
-    name         : PropTypes.string.isRequired
+    name         : PropTypes.string.isRequired,
+    isCategoryTab: PropTypes.bool
 };
 
 export default Tab;
