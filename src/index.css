@@ -60,7 +60,7 @@ ul {
   background-color: #f1f1f1;
 }
 
-.tab-items{
+.tab-item{
   background-color: inherit;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
@@ -69,15 +69,15 @@ ul {
   font-size: 17px;
 }
 
-.tab-items:hover {
+.tab-item:hover {
   background-color: #ddd;
 }
 
-.tab-items:active {
+.tab-item:active {
   background-color: rgb(0, 59, 252);
 }
 
-.active{
+.active-tab{
   background-color: gold;
 }
 

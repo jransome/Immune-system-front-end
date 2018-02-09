@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Tab = (props) => {
-    console.log(props.activeCategoryID);
     return (
         <div
-            className={`tab-items ${props.tabID === props.activeTabID ? 'active' : ''}`} 
+            className={`tab-item ${props.tabID === props.activeTabID ? 'active-tab' : ''}`} 
             onClick={props.onClickFunction}
         >
             {props.name}
@@ -14,13 +13,10 @@ const Tab = (props) => {
     );
 }
 
-
-// TODO: change active tab store to be just id not whole object
-
 function mapStateToProps(state, ownProps) {
     if(ownProps.isCategoryTab){
         return {
-            activeTabID: state.activeTab.activeCategoryID,
+            activeTabID: state.activeTab.activeCategoryID
         };
     } else {
         return {
@@ -29,16 +25,11 @@ function mapStateToProps(state, ownProps) {
     }
 }
 
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({ selectCategory: selectCategory }, dispatch);
-// }
+Tab.propTypes = {
+    name            : PropTypes.string.isRequired,
+    onClickFunction : PropTypes.func.isRequired,
+    isCategoryTab   : PropTypes.bool.isRequired,
+    tabID           : PropTypes.number.isRequired
+};
 
 export default connect(mapStateToProps)(Tab);
-
-Tab.propTypes = {
-    onClick      : PropTypes.func,
-    tabIndex     : PropTypes.number,
-    isActive     : PropTypes.bool,
-    name         : PropTypes.string.isRequired,
-    isCategoryTab: PropTypes.bool
-};
